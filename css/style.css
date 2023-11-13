@@ -1,0 +1,1093 @@
+/* =============== COMMON CSS PART START =============== */
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    line-height: 0.8;
+}
+h1,h2,h3,h4,h5,h6,p,span,ul,li{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+ol,ul,li{
+    list-style: none;
+}
+
+:root{
+    /* fonts */
+    --arizonia: 'Arizonia', cursive;
+    --ibm-plex: 'IBM Plex Sans', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --jost: 'Jost', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+    --noticia: 'Noticia Text', serif;
+    --roboto: 'Roboto', sans-serif;
+    /* colors */
+    --orange: #FD562A;
+    --purple: #7861DF; 
+    --green: #1CBE59; 
+    /* transition */
+    --com-transition: 0.5s;
+}
+
+.common-para{
+    color: #000;
+    font-size: 16px;
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.common-heading{
+    color: #000;
+    font-size: 40px;
+    font-family: var(--jost);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+/* =============== COMMON CSS PART END =============== */
+
+/* =============== Top bar CSS PART start =============== */
+#top-bar{
+    background-color: #FD562A;
+}
+#top-bar .number{
+    padding: 18px 80px 18px 182px;
+    color: white;
+    font-family: var(--inter);
+}
+#top-bar .mail{
+    padding: 18px 0px;
+    color: white;
+    font-family: var(--inter);
+}
+#top-bar i{
+    padding: 0px 5px 0 0;
+}
+/* =============== Top bar CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== NAV BAR CSS PART START =============== */
+#nav-bar{
+    background-color: transparent !important;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+}
+#nav-bar .company-logo{
+    width: 250px;
+}
+#nav-bar .navbar-nav .nav-link {
+    color: black;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 15px;
+    text-transform: capitalize;
+
+    /* position for after */
+    position: relative;
+}
+#nav-bar .navbar-nav .nav-link::after{
+    content: "";
+    
+    background-color: var(--orange);
+    width: 0%;
+    height: 2px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#nav-bar .navbar-nav .nav-link:hover::after{
+    width: 80%;
+    color: var(--orange);
+    transition: var(--com-transition);
+}
+#nav-bar .navbar-nav .nav-link:hover{
+    color: var(--orange);
+    transition: var(--com-transition);
+}
+#nav-bar .nav-bar-button{
+    color: #FFF;
+    font-size: 20px;
+    font-family: var(--jost);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: var(--orange);
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    
+    /* position for after */
+    position: relative;
+    z-index: 1;
+}
+#nav-bar .nav-bar-button:hover{
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+#nav-bar .nav-bar-button::after{
+    content: "";
+    
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+#nav-bar .nav-bar-button:hover::after{
+    width: 100%;
+    transition: var(--com-transition);
+}
+/* =============== NAV BAR CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== BANNER CSS PART START =============== */
+#banner{
+    background: url(../images/banner-bg-image.png) no-repeat center / cover;
+}
+#banner .text-part{
+    margin-left: 85px;
+}
+#banner .text-part .greetings{
+    color: #FD562A;
+    font-size: 25px;
+    font-family: var(--jost);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    padding: 265px 0 1px 0;
+}
+#banner .name{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+#banner .details{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 6px;
+    text-transform: capitalize;
+}
+#banner .details .profession{
+    color: var(--green);
+}
+#banner .details .profession abbr{
+    text-decoration: none;
+    cursor: auto;
+}
+#banner .details .country{
+    color: var(--purple);
+}
+#banner .para{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding:  0 220px 24px 0;
+}
+#banner .button-area{
+    display: flex;
+    align-items: center;
+}
+#banner .button-area .btn{
+    color: #FFF;
+    font-family: Jost;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 48px;
+    background-color: var(--orange);
+    border-radius: 50px;
+    margin-right: 80px;
+    text-transform: capitalize;
+    border: 2px solid transparent;
+
+    /* position for after */
+    position: relative;
+    z-index: 1;
+}
+#banner .button-area .btn:hover{
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+#banner .button-area .btn::after{
+    content: "";
+    
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+#banner .button-area .btn:hover::after{
+    width: 100%;
+    transition: var(--com-transition);
+}
+#banner .button-area .icon a i{
+    color: black;
+    font-size: 26px;
+    padding-right: 25px;
+}
+#banner .button-area .icon a i:hover{
+    color: var(--orange);
+    transition: var(--com-transition);
+    transform: translateY(-5px);
+}
+#banner .image-part{
+    width: 350px;
+    margin: 194px auto 194px;
+
+    /* position for icon */
+    position: relative;
+}
+#banner .image-part .man{
+    width: 100%;
+}
+#banner .image-part .extra-icon-1 {
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	width: 60px;
+
+    animation: icon-1 3s infinite;
+}
+@keyframes icon-1{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+#banner .image-part .extra-icon-2 {
+	position: absolute;
+	top: 130px;
+	right: 0px;
+	width: 60px;
+    animation: icon-2 2.5s infinite;
+}
+@keyframes icon-2{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+#banner .image-part .extra-icon-3 {
+	position: absolute;
+	bottom: 0;
+	left: 114px;
+	width: 60px;
+    animation: icon-3 3s infinite;
+}
+@keyframes icon-3{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+/* =============== BANNER CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== speciality CSS PART START =============== */
+#speciality{
+    padding: 160px 0 140px 0;
+}
+#speciality .box-info .logo{
+    width: 173px;
+    padding-bottom: 8px;
+}
+#speciality .box-info .heading{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 0 13px 0;
+}
+#speciality .box-info .common-para {
+    padding: 0 65px 0px;
+}
+/* =============== speciality CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== EXPERIENCE CSS PART START =============== */
+#experience{
+    padding-bottom: 70px;
+}
+#experience .img-part{
+    width: 458px;
+    margin: 0 auto;
+    
+    position: relative;
+}
+#experience .img-part .side-image {
+	position: absolute;
+	top: -50px;
+	left: -220px;
+	width: 130px;
+}
+#experience .img-part img{
+    width: 100%;
+}
+#experience .img-part .year {
+	position: absolute;
+	top: 105px;
+	left: -100px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: -3px -3px 7px gray;
+
+    animation: year 3s infinite;
+}
+@keyframes year{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+#experience .img-part .year .number h3 {
+	color: var(--green);
+	font-family: Jost;
+	font-size: 59px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding: 7px 20px 7px 15px;
+}
+#experience .img-part .year .text h3{
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 0;
+}
+#experience .img-part .project {
+	position: absolute;
+	top: 292px;
+	right: -64px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 3px 3px 7px gray;
+
+    animation: project 3s infinite;
+}
+@keyframes project{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+#experience .img-part .project .number h3 {
+	color: var(--purple);
+	font-family: Jost;
+	font-size: 59px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding: 7px 20px 7px 15px;
+}
+#experience .img-part .project .text h3{
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 0;
+}
+#experience .text-part{
+    /* position for side image */
+    position: relative;
+}
+#experience .text-part .top{
+color: #FD562A;
+    font-family: var(--jost);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 0 0 0;
+}
+#experience .text-part .heading{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 15px 20px 0;
+}
+#experience .text-part .common-para {
+    padding: 0 70px 36px 0;
+}
+#experience .text-part .btn{
+    color: #FFF;
+    background-color: var(--orange);
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    padding: 12px 38px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+
+    /* position for after */
+    position: relative;
+    z-index: 1;
+}
+#experience .text-part .btn:hover{
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+#experience .text-part .btn::after{
+    content: "";
+    
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+#experience .text-part .btn:hover::after{
+    width: 100%;
+    transition: var(--com-transition);
+}
+#experience .text-part .side-image-2 {
+	position: absolute;
+	bottom: -75px;
+	right: 0px;
+    width: 272px;
+}
+/* =============== EXPERIENCE CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== MY AMAZING WORK CSS PART START =============== */
+#amazing-work{
+    padding: 78px 0 156px 0;
+}
+#amazing-work .container{
+    position: relative;
+}
+#amazing-work .container .overlay {
+	position: absolute;
+	top: -75px;
+	left: 50px;
+	width: 133px;
+}
+#amazing-work .common-para {
+    line-height: 25px;
+	padding: 0 85px;
+} 
+#amazing-work .box{
+    position: relative;
+}
+#amazing-work .box .overlay-4 {
+	position: absolute;
+	bottom: -135px;
+	right: -130px;
+	z-index: -1;
+	width: 352px;
+}
+#amazing-work .box-info{
+    position: relative;
+    box-shadow: -3px -3px 10px rgba(128, 128, 128, 0.504);
+    border-radius: 10px 10px 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+#amazing-work .box-info{
+    position: relative;
+    box-shadow: -3px -3px 10px rgba(128, 128, 128, 0.504);
+    border-radius: 10px 10px 5px 5px;
+}
+#amazing-work .box-info:hover .overlay{
+    width: 100%;
+    transition: var(--com-transition);
+}
+#amazing-work .box-info:hover .overlay .overlay-info{
+    transform: scale(1);
+    transition: var(--com-transition);
+}
+#amazing-work .box-info img{
+    width: 100%;
+    max-width: 100%;
+}
+#amazing-work .box-info .overlay{
+    border-radius: 10px 10px 5px 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.95));
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+}
+#amazing-work .box-info .overlay .overlay-info{
+    transform: scale(0);
+}
+#amazing-work .box-info .overlay .project-name{
+    transform: scale(1);
+	color: #ffffff;
+	font-family: var(--noticia);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 34px;
+	text-transform: capitalize;
+	padding: 538px 0 10px 35px;
+    display: block;
+    transition: var(--com-transition);
+}
+#amazing-work .box-info .overlay .project-type{
+    color: #ffffff;
+    font-family: var(--roboto);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 0 35px 35px;    
+    display: block;
+    transition: var(--com-transition);
+}
+/* =============== MY AMAZING WORK CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== CSS PART START =============== */
+/* #skills{
+    padding: 0 0 100px 0;
+} */
+#skills .text-part .top{
+    color: var(--orange);
+    font-family: var(--jost);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 117px 0 14px 0;
+}
+#skills .text-part .common-heading{
+    font-weight: 400;
+    padding: 0 80px 23px 0;
+    text-transform: capitalize;
+}
+#skills .text-part .common-para {
+    padding: 0 96px 24px 0;
+    line-height: 26px;
+}
+#skills .text-part .skill-bar .line .text{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 0 0 5px;
+}
+#skills .text-part .skill-bar .line .bar{
+    width: 437px;
+    height: 10px;
+    border-radius: 50px;
+    background: #B5B5B5;
+    margin-bottom: 7px;
+}
+#skills .text-part .skill-bar .html .bar .parcentage{
+    width: 75%;
+    height: 100%;
+    background-color: var(--orange);
+    border-radius: 50px;
+
+    position: relative;
+}
+#skills .text-part .skill-bar .html .bar .parcentage .parcentage-number{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-100%);
+
+    color: #FD562A;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#skills .text-part .skill-bar .css .bar .parcentage{
+    width: 65%;
+    height: 100%;
+    background-color: var(--green);
+    border-radius: 50px;
+
+    position: relative;
+}
+#skills .text-part .skill-bar .css .bar .parcentage .parcentage-number{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-100%);
+
+    color: var(--green);
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#skills .text-part .skill-bar .js .bar .parcentage{
+    width: 70%;
+    height: 100%;
+    background-color: var(--purple);
+    border-radius: 50px;
+
+    position: relative;
+}
+#skills .text-part .skill-bar .js .bar .parcentage .parcentage-number{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-100%);
+
+    color: var(--purple);
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#skills .image-part img{
+    width: 100%;
+}
+/* =============== CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== SERVICES CSS PART START =============== */
+#service{
+    padding: 146px 0 100px 0;
+    position: relative;
+}
+#service .top-right-overlay{
+    width: 500px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+#service .top-left-top-overlay {
+	width: 521px;
+
+	position: absolute;
+	top: 255px;
+	left: 0;
+	z-index: -1;
+}
+#service .heading .top{
+    color: #FD562A;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#service .heading .common-para {
+    padding: 10px 65px 78px;
+}
+#service .service-info .box{
+    display: flex;
+
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25), -5px -5px 5px 0px rgba(0, 0, 0, 0.25);    
+}
+#service .service-info .box .image-part {
+	width: 400px;
+	margin: 53px 33px 0 50px;
+}
+#service .service-info .box .image-part img{
+    width: 100%;
+}
+#service .service-info .box .text-part .heading{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 74px 0 6px 0;
+    text-transform: capitalize;
+}
+#service .service-info .box .text-part .price{
+    text-transform: capitalize;
+    color: #000;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 0 10px 0;
+}
+#service .service-info .box .text-part .price span{
+    color: var(--orange);
+}
+#service .service-info .box .text-part .common-para {
+    padding: 0 63px 71px 0;
+}
+/* =============== SERVICES CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== NEWS LETTER CSS PART START =============== */
+#news-letter{
+    padding: 0 0 73px 0;
+    position: relative;
+}
+#news-letter .right-overlay {
+	position: absolute;
+	top: -200px;
+	right: 0;
+	width: 347px;
+}
+#news-letter .information{
+padding: 120px 73px 110px 90px;
+border-radius: 15px;
+
+background: url(../images/dot\ image.png) no-repeat center / cover ;
+}
+#news-letter .information .text-part .top{
+    color: #FFF !important;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;    
+}
+#news-letter .information .text-part .common-heading{
+    color: #FFF !important;
+    padding: 0 0 8px 0;
+}
+#news-letter .information .text-part .common-para{
+    color: #FFF !important;
+    padding: 0 0 0 0;
+}
+#news-letter .information .input-part{
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 0 0 0 0;
+    
+    display: flex;
+    justify-content: space-between;
+}
+#news-letter .information .input-part input{
+    padding: 30px 0 30px 40px;
+    border-radius: 15px 0 0 15px;
+    border: none;
+
+    color: #000;
+    font-family: var(--jost);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#news-letter .information .input-part button{
+    color: #FFF;
+    font-family: var(--jost);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 34px 54px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 0 15px 15px 0;
+}
+/* =============== NEWS LETTER CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== CONTACT PART CSS PART START =============== */
+#contact-me{
+    padding: 58px 0 100px 0;
+    
+    position: relative;
+}
+#contact-me .left-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 154px;
+}
+#contact-me .heading .top{
+    color: #F75023;
+    font-family: var(--jost);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 3px;
+}
+#contact-me .heading .common-para {
+	padding: 25px 75px 0;
+}
+#contact-me .contact-info .address{
+    display: flex;
+}
+#contact-me .contact-info .address .icon a i {
+    padding: 30px 35px;
+	color: var(--orange);
+	background-color: #FFD0C3;
+	border-radius: 50%;
+	font-size: 30px;
+}
+#contact-me .contact-info .address .icon a i:hover {
+    background-color: var(--orange);
+    color: #FFD0C3;
+    transition: var(--com-transition);
+}
+#contact-me .contact-info .address .text h4{
+    color: #000;
+    font-family: Jost;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+    padding: 8px 0 0 14px;
+}
+#contact-me .contact-info .address .text .common-para{
+    padding: 0 0 0 14px;
+}
+#contact-me .contact-info .mail{
+    display: flex;
+}
+#contact-me .contact-info .mail .icon a i {
+	padding: 30px 29px;
+	color: var(--green);
+	background-color: #A2E8BC;
+	border-radius: 50%;
+	font-size: 30px;
+}
+#contact-me .contact-info .mail .icon a i:hover {
+    background-color: var(--green);
+    color: white;
+    transition: var(--com-transition);
+}
+#contact-me .contact-info .mail .text h4{
+    color: #000;
+    font-family: Jost;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+    padding: 8px 0 0 14px;
+}
+#contact-me .contact-info .mail .text .common-para{
+    padding: 0 0 0 14px;
+}
+#contact-me .contact-info .phone{
+    display: flex;
+}
+#contact-me .contact-info .phone .icon a i {
+	padding: 30px 32px;
+	color: var(--purple);
+	background-color: #FFD0C3;
+	border-radius: 50%;
+	font-size: 25px;
+}
+#contact-me .contact-info .phone .icon a i:hover {
+    background-color: var(--orange);
+    color: #FFD0C3;
+    transition: var(--com-transition);
+}
+#contact-me .contact-info .phone .text h4{
+    color: #000;
+    font-family: var(--jost);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+    padding: 8px 0 0 14px;
+}
+#contact-me .contact-info .phone .text .common-para{
+    padding: 0 0 0 14px;
+}
+#contact-me .info-from-client .data{
+    padding: 20px 40px;
+    width: 300px;
+    margin: 0 15px 15px 0;
+    border-radius: 15px;
+    border: 2px solid rgba(86, 86, 86, 0.50);
+    background: #FFF;
+    color: #000;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#contact-me .info-from-client .text-area{
+    border-radius: 15px;
+    border: 2px solid rgba(86, 86, 86, 0.50);
+    background: #FFF;
+    color: #000;
+    font-family: var(--jost);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 615px;
+    min-height: 145px;
+    height: 245px;
+    padding: 20px 40px;
+}
+#contact-me .info-from-client button{
+    color: #FFF;
+    text-align: center;
+    font-family: var(--jost);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+    background-color: var(--orange);
+    border-radius: 50px;
+    margin-top: 23px;
+    padding: 20px 40px;
+    border: 2px solid transparent;
+    text-transform: capitalize;
+
+    /* position for after */
+    position: relative;
+    z-index: 1;
+}
+#contact-me .info-from-client button:hover{
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+#contact-me .info-from-client button::after{
+    content: "";
+    
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+#contact-me .info-from-client button:hover::after{
+    width: 100%;
+    transition: var(--com-transition);
+}
+/* =============== CONTACT PART CSS PART END =============== */
+
+/* ========================================================================================= */
+/* =============== CSS PART START =============== */
+footer{
+    padding: 20px 0;
+    background-color: var(--orange);
+}
+footer .logo img{
+    width: 150px;
+}
+footer .copy-right p{
+    color: #FFF;
+    font-family: var(--ibm-plex);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+footer .copy-right p a{
+    color: #FFF;
+}
+footer .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .icon a i{
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+}
+footer .icon a i:hover{
+    transition: var(--com-transition);
+    transform: translateY(-5px);
+}
+/* =============== CSS PART END =============== */
